@@ -20,7 +20,9 @@ function Search() {
 
                 if (uuidData.id){
                     setavatar(`https://crafatar.com/avatars/${uuidData.id}`)
-                };
+                }else {
+                    setavatar('https://minecraftfaces.com/wp-content/bigfaces/big-steve-face.png');
+                }
 
                 const response = await fetch(`https://srv726415.hstgr.cloud:5000/api/searchuser?username=${encodeURIComponent(username)}`);
 
